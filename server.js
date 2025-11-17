@@ -18,8 +18,7 @@ app.get("/", (req, res) => {
 
 // TEMP DEBUG: Check if OPENAI_API_KEY is visible to the app
 app.get("/debug/env", (req, res) => { 
-  const apiKey = 
-process.env.OPENAI_API_KEY; 
+  const apiKey = process.env.OPENAI_API_KEY; 
   res.json({
     hasKey: !!apiKey,
     length: apiKey ? apiKey.length : 0,
