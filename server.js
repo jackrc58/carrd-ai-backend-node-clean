@@ -16,14 +16,15 @@ app.get("/", (req, res) => {
   res.send("Carrd AI backend is running ✅");
 });
 
-// TEMP DEBUG: Check if OPENAI_API_KEY is visible to the app
-app.get("/debug/env", (req, res) => { 
-  const apiKey = process.env.OPENAI_API_KEY; 
+// Debug Route
+app.get("/debug/env", (req, res) => {
+  const apiKey =
+process.env.OPENAI_API_KEY;
   res.json({
     hasKey: !!apiKey,
-    length: apiKey ? apiKey.length : 0,
+    length: apiKey ? apiKey.length : 0;
   });
-}); 
+});
 
 // Main AI endpoint
 app.post("/api/ai", async (req, res) => {
@@ -109,4 +110,3 @@ ${message}`;
 app.listen(PORT, () => {
   console.log(`Server listening on port ${PORT}`);
 });
-
