@@ -1,8 +1,4 @@
-Clean server.js for FractionalGeek AI Backend
-
---------------------------------------------------
-server.js (copy/paste into your backend)
---------------------------------------------------
+// Clean server.js for FractionalGeek AI Backend
 
 const express = require("express");
 const cors = require("cors");
