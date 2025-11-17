@@ -22,7 +22,7 @@ app.get("/debug/env", (req, res) => {
 process.env.OPENAI_API_KEY;
   res.json({
     hasKey: !!apiKey,
-    length: apiKey ? apiKey.length : 0;
+    length: apiKey ? apiKey.length : 0,
   });
 });
 
